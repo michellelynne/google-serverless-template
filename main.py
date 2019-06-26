@@ -35,7 +35,7 @@ def get_item(collection, request):
         List<dict>: List of items found.
     """
     print('request_path {}'.format(request.path))
-    item_id = request.path.split('item/')[-1]
+    item_id = request.path.split('/')[-1]
     print('item_id {}'.format(item_id))
     if item_id:
         doc = collection.document(item_id)
