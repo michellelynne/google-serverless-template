@@ -1,0 +1,7 @@
+steps:
+- name: 'gcr.io/cloud-builders/gcloud'
+  args: ['functions', 'deploy', 'item',
+         '--source', 'https://source.developers.google.com/projects/template-243702/repos/github_michellelynne_google-serverless-template/moveable-aliases/master/paths/',
+         '--runtime', 'python37', '--trigger-http', '--project', 'template-243702'
+  ]
+  dir: 'functions/autodeploy'
